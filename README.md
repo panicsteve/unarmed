@@ -20,15 +20,15 @@ Einstein emulates a Newton, which uses a StrongARM-110 (armv4 instruction set). 
 Usage
 -----
 
-./unarmed <path-to-binary-image>
+    ./unarmed <path-to-binary-image>
 
 Building
 --------
 
 Unix/Linux: 
 
-cc unarmed.c -o unarmed
+    cc unarmed.c -o unarmed
 
 Mac OS X: 
 
-xcrun cc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/ unarmed.c -o unarmed
+    xcrun cc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/ unarmed.c -o unarmed
