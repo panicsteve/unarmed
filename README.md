@@ -1,7 +1,7 @@
 unarmed
 =======
 
-Plain C adaptation of Paul Guyot's ARM disassembler from the Einstein project
+unarmed is a plain C adaptation of Paul Guyot's ARM disassembler from the Einstein project
 
 Summary
 -------
