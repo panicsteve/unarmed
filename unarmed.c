@@ -212,7 +212,8 @@ char const insn_block_transfers[][4] =
 
 char const insn_stack_block_transfers[][4] =
 {
-	"ed", "ea", "fd", "fa"
+	"ed", "ea", "fd", "fa", /* stm */
+	"fa", "fd", "ea", "ed", /* ldm */
 };
 
 char const op_shifts[][4] =
@@ -246,7 +247,7 @@ char const arm32_registers[][4] =
 
 #define insn_condition(x)	arm32_insn_conditions[(x >> 28) & 0x0f]
 #define insn_blktrans(x)	insn_block_transfers[(x >> 23) & 3]
-#define insn_stkblktrans(x)	insn_stack_block_transfers[(x >> 23) & 3]
+#define insn_stkblktrans(x)	insn_stack_block_transfers[((x >> (20 - 2)) & 4)|((x >> 23) & 3)]
 #define op2_shift(x)		op_shifts[(x >> 5) & 3]
 #define insn_fparnd(x)		insn_fpa_rounding[(x >> 5) & 0x03]
 #define insn_fpaprec(x)		insn_fpa_precision[(((x >> 18) & 2)|(x >> 7)) & 1]
